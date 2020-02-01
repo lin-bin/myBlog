@@ -13,7 +13,7 @@
     <meta name="description" content="林兵的个人博客,"> 
     <meta name="author" content="林兵"> 
     <link rel="alternative" href="atom.xml" title="lin" type="application/atom+xml"> 
-    <link rel="icon" href="/myBlog/myBlog/img/lai.jpg"> 
+    <link rel="icon" href="/myBlog/myBlog/img/favicon.png"> 
     <link href="https://fonts.loli.net/css?family=Roboto+Mono|Rubik&display=swap" rel="stylesheet">
     
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
@@ -140,16 +140,16 @@
             <a href="/categories/hexo"><b>「
                 </b>HEXO<b> 」</b></a>
             
-            一月 31, 2020
+            二月 01, 2020
         </p>
         <h3 class="post-title animated fadeInDown">
-            <a href="/myBlog/2020/01/31/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" title="hexo的基础用法" class="posttitle">hexo的基础用法</a></h3>
+            <a href="/myBlog/2020/02/01/hexo%E6%96%87%E7%AB%A0%E6%93%8D%E4%BD%9C/" title="hexo文章操作" class="posttitle">hexo文章操作</a></h3>
         
         <p class="post-count animated fadeInDown">
             
             <span>
                 <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                2.9k
+                3.2k
             </span>
             
             
@@ -166,10 +166,13 @@
         
         <div class="md-content animated fadeIn">
             
-            <p>&emsp;&emsp;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown 解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<p>&emsp;&emsp;首先确保电脑已经安装...</p>
+            <pre><code class="js">// 在 hexo 所在目录下，打开终端，在命令行输入
+hexo new a // a 是文章标题，也可以加上双引号
+
+// 正确的结果：我们会在 _posts 里看见多了一个 lin.md 文件
+//...</code></pre>
             
-            <span class="read-more"><a href="/myBlog/2020/01/31/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" title="查看全文" class="posttitle">查看全文</a>
+            <span class="read-more"><a href="/myBlog/2020/02/01/hexo%E6%96%87%E7%AB%A0%E6%93%8D%E4%BD%9C/" title="查看全文" class="posttitle">查看全文</a>
                 <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
     </div>
@@ -190,6 +193,61 @@
 
     <div id="primary">
         
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/myBlog/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="/categories/hexo">
+                  <b>「 </b>HEXO<b> 」</b>
+                </a>
+            
+            一月 31, 2020
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/myBlog/2020/01/31/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" title="hexo的基础用法" class="posttitle">hexo的基础用法</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                        2.8k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                        3 mins.
+                    </span>
+                
+                
+            </p>
+            
+                <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/myBlog/tags/hexo/" rel="tag">hexo</a></li></ul>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <p>&emsp;&emsp;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown 解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<p>&emsp;&emsp;首先确保电脑已经安装了 nodejs 和 git，如果没有安装请先安装后再执行以下操作。</p>
+<pre><code class="nodejs">npm install hexo-cli -g # 脚手架
+
+hexo init myBlog # 创建项目，myBlog为项目名，可自定义
+
+cd myBlog # 进入目录
+
+npm install # 安装依赖</code></pre>
+<pre><code class="文件层级结构">├── _config...</code></pre>
+            
+            <span class="read-more"><a href="/myBlog/2020/01/31/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>
+
+
     </div>
     
 </div>
@@ -273,13 +331,6 @@
   }
 </script>
 
-
-
-    
-<link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
-
-    
-<script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
 
 
 

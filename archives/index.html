@@ -13,7 +13,7 @@
     <meta name="description" content="林兵的个人博客,"> 
     <meta name="author" content="林兵"> 
     <link rel="alternative" href="atom.xml" title="lin" type="application/atom+xml"> 
-    <link rel="icon" href="/myBlog/myBlog/img/lai.jpg"> 
+    <link rel="icon" href="/myBlog/myBlog/img/favicon.png"> 
     <link href="https://fonts.loli.net/css?family=Roboto+Mono|Rubik&display=swap" rel="stylesheet">
     
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
@@ -79,10 +79,15 @@
                                     </div>
                                     <div class="timeline-marker"></div>
                                     <div class="timeline-content">
-                                        <a class="timeline-title" target="_self" href="/myBlog/2020/02/01/hexo%E7%BB%99%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB/">hexo给文章分类</a>
+                                        <a class="timeline-title" target="_self" href="/myBlog/2020/02/01/hexo%E6%96%87%E7%AB%A0%E6%93%8D%E4%BD%9C/">hexo文章操作</a>
                                         <p>
-                                            
+                                            新建文章// 在 hexo 所在目录下，打开终端，在命令行输入
+hexo new a // a 是文章标题，也可以加上双引号
 
+// 正确的结果：我们会在 _posts 里看见多了一个 lin.md 文件
+// 因此我们也知道了，默认情况下，hexo为我们创建的是markdown文件
+// 而这个_posts文件夹，算是一个比较特殊的文件夹，因为它装着所有你发布出去的文章。
+&emsp;&e...
                                         </p>
                                     </div>
                                 </li>
@@ -218,13 +223,6 @@ hexo init myBlog # 创...
   }
 </script>
 
-
-
-    
-<link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
-
-    
-<script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
 
 
 

@@ -9,7 +9,7 @@
 /* jshint -W119 */
 
 /**
- * Watch the TOC during scroll and fill in active status
+ * 查看滚动期间的TOC并填写活动状态
  * @param {} menuSelector
  * @param {*} options
  */
@@ -49,7 +49,7 @@ function scrollSpy(menuSelector, options) {
 }
 
 /**
- * Utilise the background color to avoid scrolling flashes
+ * 使用背景色来避免滚动闪烁
  */
 function utiliseBgColor() {
   setTimeout(function () {
@@ -62,7 +62,7 @@ function utiliseBgColor() {
 }
 
 /**
- * Buidling the caption html in an aritle
+ * 放大缩小字体功能 放大缩小字体功能
  */
 function buildImgCaption() {
   var images = $('.content').find('img');

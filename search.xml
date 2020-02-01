@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>vue 指令</title>
+      <link href="/myBlog/2020/02/01/vue%E6%8C%87%E4%BB%A4/"/>
+      <url>/myBlog/2020/02/01/vue%E6%8C%87%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<h1 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h1><p>&emsp;&emsp;指令是指带有 v- 前缀的标签属性，以表示他们是 vue 提供的特殊特性。</p><h2 id="v-bind"><a href="#v-bind" class="headerlink" title="v-bind"></a>v-bind</h2><pre><code class="html">  &lt;h1 v-bind:title=&quot;msg&quot;&gt;标题&lt;h1&gt;  &lt;h1 :title=&quot;msg&quot;&gt;标题&lt;h1&gt;&lt;!-- 简写：直接在属性前写： --&gt;</code></pre><h2 id="v-on"><a href="#v-on" class="headerlink" title="v-on"></a>v-on</h2><p>&emsp;&emsp;j进行事件绑定<br>&emsp;&emsp;v-on:事件名=“该事件需要执行的代码”<br>&emsp;&emsp;简写：@事件名=“该事件需要执行的代码”<br>&emsp;&emsp;事件修饰符：<br>&emsp;&emsp;&emsp;&emsp;.stop：阻止冒泡<br>&emsp;&emsp;&emsp;&emsp;.prevent：阻止默认事件<br>&emsp;&emsp;&emsp;&emsp;.capture：使<br>&emsp;&emsp;&emsp;&emsp;.self：只监听直接触发该元素的事件<br>&emsp;&emsp;&emsp;&emsp;.once：只触发一次<br>&emsp;&emsp;&emsp;&emsp;.left：左键点击事件<br>&emsp;&emsp;&emsp;&emsp;.right：右键点击事件<br>&emsp;&emsp;&emsp;&emsp;.middle：中间滚轮<br><img src="1.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>认识 vue</title>
+      <link href="/myBlog/2020/02/01/%E8%AE%A4%E8%AF%86vue/"/>
+      <url>/myBlog/2020/02/01/%E8%AE%A4%E8%AF%86vue/</url>
+      
+        <content type="html"><![CDATA[<h1 id="认识-Vue"><a href="#认识-Vue" class="headerlink" title="认识 Vue"></a>认识 Vue</h1><p>&emsp;&emsp;SPA（单页WEB应用）：也就是只有一个 web 页面。</p><h2 id="第一步：引入框架"><a href="#第一步：引入框架" class="headerlink" title="第一步：引入框架"></a>第一步：引入框架</h2><pre><code class="html">  &lt;script src=&quot;vue.js&quot;&gt;&lt;/script&gt;</code></pre><h2 id="第二步：使用框架"><a href="#第二步：使用框架" class="headerlink" title="第二步：使用框架"></a>第二步：使用框架</h2><pre><code class="js">new Vue({el:&quot;对象的id&quot;,data:{// 数据中心},watch：{// 用于监听属性值的变化},computed：{// 计算属性，主要是用来对原数据进行改造输出，类似于方法，，在数据变化时，会同步更新，相对于方法来讲，依赖于数据变化时，才会重新计算，而方法在每次调用时都会重新计算，所以比方法性能高},filters：{// 过滤器，对数据进行过滤处理},methods:{// 在这里定义所有函数}})</code></pre><h1 id="服务器渲染-vs-客户端渲染"><a href="#服务器渲染-vs-客户端渲染" class="headerlink" title="服务器渲染 vs 客户端渲染"></a>服务器渲染 vs 客户端渲染</h1><img src='1.png'><h1 id="前后端分离"><a href="#前后端分离" class="headerlink" title="前后端分离"></a>前后端分离</h1><p>&emsp;&emsp;（PC端、移动端 web、原生 APP）<br>&emsp;&emsp;系统分离后，同一个后端系统，只需要提供一套接口（如：“url”，POST）<br><img src='2.png'></p><h1 id="开发模式"><a href="#开发模式" class="headerlink" title="开发模式"></a>开发模式</h1><img src='3.png'>]]></content>
+      
+      
+      <categories>
+          
+          <category> vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo文章操作</title>
       <link href="/myBlog/2020/02/01/hexo%E6%96%87%E7%AB%A0%E6%93%8D%E4%BD%9C/"/>
       <url>/myBlog/2020/02/01/hexo%E6%96%87%E7%AB%A0%E6%93%8D%E4%BD%9C/</url>

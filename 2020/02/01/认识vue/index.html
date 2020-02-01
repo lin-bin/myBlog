@@ -5,13 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>hexo的基础用法 - lin</title>
+    <title>认识 vue - lin</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="TriDiamond Obsidian,"> 
-    <meta name="description" content="林兵的个人博客,Hexo&amp;emsp;&amp;emsp;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown 解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
-hexo 安装&amp;emsp;&amp;ems,"> 
+    <meta name="description" content="林兵的个人博客,认识 Vue&amp;emsp;&amp;emsp;SPA（单页WEB应用）：也就是只有一个 web 页面。
+第一步：引入框架  &amp;lt;script src=&amp;quot;vue.js&amp;quot;&amp;gt;&amp;lt;/,"> 
     <meta name="author" content="林兵"> 
     <link rel="alternative" href="atom.xml" title="lin" type="application/atom+xml"> 
     <link rel="icon" href="/myBlog/myBlog/img/favicon.png"> 
@@ -58,7 +58,7 @@ hexo 安装&amp;emsp;&amp;ems,">
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://lin-bin.github.io/myBlog">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">hexo的基础用法</h3>
+        <h3 class="subtitle">认识 vue</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -88,25 +88,25 @@ hexo 安装&amp;emsp;&amp;ems,">
         <div class="else">
             <p class="animated fadeInDown">
                 
-                <a href="/categories/hexo"><b>「
-                    </b>HEXO<b> 」</b></a>
+                <a href="/categories/vue"><b>「
+                    </b>VUE<b> 」</b></a>
                 
-                一月 31, 2020
+                二月 01, 2020
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/myBlog/2020/01/31/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" title="hexo的基础用法" class="">hexo的基础用法</a>
+            <h3 class="post-title animated fadeInDown"><a href="/myBlog/2020/02/01/%E8%AE%A4%E8%AF%86vue/" title="认识 vue" class="">认识 vue</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    2.8k
+                    1.1k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                    3 mins.
+                    1 mins.
                 </span>
                 
                 
@@ -119,7 +119,7 @@ hexo 安装&amp;emsp;&amp;ems,">
             </p>
             
             
-            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/myBlog/tags/hexo/" rel="tag">hexo</a></li></ul>
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/myBlog/tags/vue/" rel="tag">vue</a></li></ul>
             
         </div>
     </div>
@@ -140,61 +140,28 @@ hexo 安装&amp;emsp;&amp;ems,">
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><p>&emsp;&emsp;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown 解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<h1 id="hexo-安装"><a href="#hexo-安装" class="headerlink" title="hexo 安装"></a>hexo 安装</h1><p>&emsp;&emsp;首先确保电脑已经安装了 nodejs 和 git，如果没有安装请先安装后再执行以下操作。</p>
-<pre><code class="nodejs">npm install hexo-cli -g # 脚手架
+            <h1 id="认识-Vue"><a href="#认识-Vue" class="headerlink" title="认识 Vue"></a>认识 Vue</h1><p>&emsp;&emsp;SPA（单页WEB应用）：也就是只有一个 web 页面。</p>
+<h2 id="第一步：引入框架"><a href="#第一步：引入框架" class="headerlink" title="第一步：引入框架"></a>第一步：引入框架</h2><pre><code class="html">  &lt;script src=&quot;vue.js&quot;&gt;&lt;/script&gt;</code></pre>
+<h2 id="第二步：使用框架"><a href="#第二步：使用框架" class="headerlink" title="第二步：使用框架"></a>第二步：使用框架</h2><pre><code class="js">new Vue({
+el:&quot;对象的id&quot;,
+data:{// 数据中心
+},
+watch：{// 用于监听属性值的变化
 
-hexo init myBlog # 创建项目，myBlog为项目名，可自定义
+},
+computed：{// 计算属性，主要是用来对原数据进行改造输出，类似于方法，，在数据变化时，会同步更新，相对于方法来讲，依赖于数据变化时，才会重新计算，而方法在每次调用时都会重新计算，所以比方法性能高
+},
+filters：{// 过滤器，对数据进行过滤处理
 
-cd myBlog # 进入目录
+},
+methods:{// 在这里定义所有函数
 
-npm install # 安装依赖</code></pre>
-<h2 id="基本结构"><a href="#基本结构" class="headerlink" title="基本结构"></a>基本结构</h2><pre><code class="文件层级结构">├── _config.yml  # 网站的配置文件
+}
+})</code></pre>
+<h1 id="服务器渲染-vs-客户端渲染"><a href="#服务器渲染-vs-客户端渲染" class="headerlink" title="服务器渲染 vs 客户端渲染"></a>服务器渲染 vs 客户端渲染</h1><img src='1.png'>
 
-├── package.json # 应用程序的信息
-
-├── scaffolds # 通用的 markdown 模板
-
-├── source # 存放用户资源的地方
-
-    ├── _drafts # 草稿文件
-
-    └── _posts # 发布的文章
-
-└── themes # 博客的模板</code></pre>
-<h1 id="使用主题"><a href="#使用主题" class="headerlink" title="使用主题"></a>使用主题</h1><p>&emsp;&emsp;hexo 有非常丰富的第三方主题，可以快速帮助我们搭建功能强大的博客网站：<br>&emsp;&emsp;<br>&emsp;&emsp;第一步、下载主题模板 <a href="https://hexo.io/themes/" target="_blank">点击这里获取主题模板；</a><br>&emsp;&emsp;第二步、将下载的模板解压到 themes 目录；<br>&emsp;&emsp;第三步、修改根目录下的 _config.yml 文件：</p>
-<pre><code class="代码块">theme: 模板名字</code></pre>
-<h1 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h1><p>&emsp;&emsp;在终端运行以下命令：</p>
-<pre><code class="终端">hexo new &lt;title&gt;</code></pre>
-<p>&emsp;&emsp;这样在根目录下的 source/_posts 目录下就会生成一个 .md 的文件了，然后就可以直接进行编辑。_或者直接在 _posts 目录下新建 markdown 文件编辑，在 _drafts 目录新建 markdown 文件，就是草稿。</p>
-<h1 id="运行-hexo-进行预览"><a href="#运行-hexo-进行预览" class="headerlink" title="运行 hexo 进行预览"></a>运行 hexo 进行预览</h1><pre><code class="终端"># 生成静态文件并监视文件变动，可简写： hexo g
-hexo generate -w  
-
-
-hexo server // 启动服务器，可简写：hexo s
-
-
-
-# 调试模式
-hexo s --debug</code></pre>
-<h1 id="hexo-配置到-github-上"><a href="#hexo-配置到-github-上" class="headerlink" title="hexo 配置到 github 上"></a>hexo 配置到 github 上</h1><h2 id="先安装-git-插件"><a href="#先安装-git-插件" class="headerlink" title="先安装 git 插件"></a>先安装 git 插件</h2><pre><code class="终端">npm install hexo-deployer-git --save
-</code></pre>
-<h2 id="配置-git-，修改根目录下的-config-yml-文件"><a href="#配置-git-，修改根目录下的-config-yml-文件" class="headerlink" title="配置 git ，修改根目录下的 _config.yml 文件:"></a>配置 git ，修改根目录下的 _config.yml 文件:</h2><pre><code class="yml">deploy:
-  type: git
-  repository: https://github.com/lin-bin/myBlog.git # github仓库地址
-  branch: master</code></pre>
-<h2 id="推送到-github"><a href="#推送到-github" class="headerlink" title="推送到 github"></a>推送到 github</h2><pre><code class="终端">  # 清除缓存文件（db.json）和已生成的静态文件（public）
-  hexo clean
-
-  # 生成静态文件
-  hexo generate # 简写为 hexo g
-
-  # 然后部署到 github 上
-  hexo deploy # 简写为：hexo d
-
-  # 或者以上两步直接替换为
-  hexo generate -d</code></pre>
-<h1 id="github-配置"><a href="#github-配置" class="headerlink" title="github 配置"></a>github 配置</h1><p>&emsp;&emsp;进入 github 仓库，选择 Settings<br><img src='1.png'><br>&emsp;&emsp;设置 GitHub Pages<br><img src='2.png'></p>
+<h1 id="前后端分离"><a href="#前后端分离" class="headerlink" title="前后端分离"></a>前后端分离</h1><p>&emsp;&emsp;（PC端、移动端 web、原生 APP）<br>&emsp;&emsp;系统分离后，同一个后端系统，只需要提供一套接口（如：“url”，POST）<br><img src='2.png'></p>
+<h1 id="开发模式"><a href="#开发模式" class="headerlink" title="开发模式"></a>开发模式</h1><img src='3.png'>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
@@ -240,7 +207,7 @@ hexo s --debug</code></pre>
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>目录</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo"><span class="toc-number">1.</span> <span class="toc-text">Hexo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo-安装"><span class="toc-number">2.</span> <span class="toc-text">hexo 安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本结构"><span class="toc-number">2.1.</span> <span class="toc-text">基本结构</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#使用主题"><span class="toc-number">3.</span> <span class="toc-text">使用主题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#创建文章"><span class="toc-number">4.</span> <span class="toc-text">创建文章</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#运行-hexo-进行预览"><span class="toc-number">5.</span> <span class="toc-text">运行 hexo 进行预览</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo-配置到-github-上"><span class="toc-number">6.</span> <span class="toc-text">hexo 配置到 github 上</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#先安装-git-插件"><span class="toc-number">6.1.</span> <span class="toc-text">先安装 git 插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置-git-，修改根目录下的-config-yml-文件"><span class="toc-number">6.2.</span> <span class="toc-text">配置 git ，修改根目录下的 _config.yml 文件:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#推送到-github"><span class="toc-number">6.3.</span> <span class="toc-text">推送到 github</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#github-配置"><span class="toc-number">7.</span> <span class="toc-text">github 配置</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#认识-Vue"><span class="toc-number">1.</span> <span class="toc-text">认识 Vue</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一步：引入框架"><span class="toc-number">1.1.</span> <span class="toc-text">第一步：引入框架</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二步：使用框架"><span class="toc-number">1.2.</span> <span class="toc-text">第二步：使用框架</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#服务器渲染-vs-客户端渲染"><span class="toc-number">2.</span> <span class="toc-text">服务器渲染 vs 客户端渲染</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#前后端分离"><span class="toc-number">3.</span> <span class="toc-text">前后端分离</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#开发模式"><span class="toc-number">4.</span> <span class="toc-text">开发模式</span></a></li></ol>
                 </div>
             </div>
             

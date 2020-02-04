@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>vue中引入阿里巴巴矢量图</title>
+      <link href="/myBlog/2020/02/04/vue%E4%B8%AD%E5%BC%95%E5%85%A5%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E7%9F%A2%E9%87%8F%E5%9B%BE/"/>
+      <url>/myBlog/2020/02/04/vue%E4%B8%AD%E5%BC%95%E5%85%A5%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E7%9F%A2%E9%87%8F%E5%9B%BE/</url>
+      
+        <content type="html"><![CDATA[<h1 id="登录阿里巴巴矢量图库"><a href="#登录阿里巴巴矢量图库" class="headerlink" title="登录阿里巴巴矢量图库"></a>登录阿里巴巴矢量图库</h1><p>  &emsp;&emsp; 矢量图库：<a href="http://www.iconfont.cn/home/index" target="_blank" rel="noopener">http://www.iconfont.cn/home/index</a><br>  <img src="1.png"></p><h1 id="创建自己的项目"><a href="#创建自己的项目" class="headerlink" title="创建自己的项目"></a>创建自己的项目</h1>  <img src="2.png">  <img src="3.png"><h1 id="按照模板填写"><a href="#按照模板填写" class="headerlink" title="按照模板填写"></a>按照模板填写</h1><p>  &emsp;&emsp; Symbol 前缀   和 Font Family  必须这样写， 因为 在vue里面 是el-icon-xxx 这样引入的，避免命名不一致。<br>  <img src="4.png"></p><h1 id="项目创建完成"><a href="#项目创建完成" class="headerlink" title="项目创建完成"></a>项目创建完成</h1>  <img src="5.png"><p>  &emsp;&emsp; 回到 矢量图图主页， 找到自己需要的图标， 加入项目。<br>&emsp;&emsp; 1：进入图标库<br>&emsp;&emsp; 2：找到自己要的图标<br>  <img src="6.png"><br>&emsp;&emsp; 3：在自己要的图标上 点击 购物车图标 加入购物车<br>&emsp;&emsp; 4:点击右上角的购物车<br>  <img src="7.png"><br>&emsp;&emsp; 5：这里会有自己选择加入的图标， 点击  添加至项目  的按钮</p>  <img src="8.png"><p>&emsp;&emsp; 6：选择刚刚创建的项目<br>  <img src="9.png"><br>&emsp;&emsp; 7： 选择  Font class<br>  <img src="10.png"><br>&emsp;&emsp;8:下载至本地<br>  <img src="11.png"><br>&emsp;&emsp;9： 下载后解压<br>&emsp;&emsp;10： 删除红色标记的四个文件<br>  <img src="12.png"><br>&emsp;&emsp;11：在vue项目的 src &gt; assets 下新建  icon文件夹， 将剩下的六个文件 放进去<br>  <img src="13.png"><br>&emsp;&emsp;12： 在 main.js 中 引入  iconfont.css 文件<br>  <img src="14.png"><br>&emsp;&emsp;13： 在页面中引入 图标， 在仓库中， 图标的名字是   el-icon-denglu, 那么在页面中 就引入这个名字就可以了。</p>  <img src="15.png">]]></content>
+      
+      
+      <categories>
+          
+          <category> vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+            <tag> 矢量图 </tag>
+            
+            <tag> iconfont </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vue 指令</title>
       <link href="/myBlog/2020/02/01/vue%E6%8C%87%E4%BB%A4/"/>
       <url>/myBlog/2020/02/01/vue%E6%8C%87%E4%BB%A4/</url>

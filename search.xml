@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Github</title>
+      <link href="/myBlog/2020/02/04/Github/"/>
+      <url>/myBlog/2020/02/04/Github/</url>
+      
+        <content type="html"><![CDATA[<h1 id="在-windows-上安装"><a href="#在-windows-上安装" class="headerlink" title="在 windows 上安装"></a>在 windows 上安装</h1><p>&emsp;&emsp;直接官网下载:<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a></p><h1 id="Git-配置"><a href="#Git-配置" class="headerlink" title="Git 配置"></a>Git 配置</h1><p>&emsp;&emsp;Git 自带一个 git config 的工具来帮助设置控制 Git 外观和行为的配置变量。 这些变量存储在三个不同的位置：</p><p>&emsp;&emsp;1、 /etc/gitconfig 文件: 包含系统上每一个用户及他们仓库的通用配置。 如果使用带有 –system 选项的 git config 时，它会从此文件读写配置变量。</p><p>&emsp;&emsp;2、 ~/.gitconfig 或 ~/.config/git/config 文件：只针对当前用户。 可以传递 –global 选项让 Git 读写此文件。</p><p>&emsp;&emsp;3、 当前使用仓库的 Git 目录中的 config 文件（就是 .git/config）：针对该仓库。每一个级别覆盖上一级别的配置，所以 .git/config 的配置变量会覆盖 /etc/gitconfig 中的配置变量。</p><h1 id="配置用户名与邮箱"><a href="#配置用户名与邮箱" class="headerlink" title="配置用户名与邮箱"></a>配置用户名与邮箱</h1><p>&emsp;&emsp;当安装完 Git 应该做的第一件事就是设置你的用户名称与邮件地址。 这样做很重要，因为每一个 Git 的提交都会使用这些信息，并且它会写入到你的每一次提交中，不可更改：</p><pre><code class="js"># 如果想设置为全局生效，添加 --global 参数git config [--global] user.name &quot;你的用户名&quot;git config [--global] user.email &quot;你的邮箱&quot;</code></pre><p>&emsp;&emsp;当你想针对特定项目使用不同的用户名称与邮件地址时，可以在那个项目目录下运行没有 –global 选项的命令来配置。</p><h1 id="检查配置信息"><a href="#检查配置信息" class="headerlink" title="检查配置信息"></a>检查配置信息</h1><pre><code class="js"># 显示当前的 Git 配置git config --list​# 编辑 Git 配置文件git config -e [--global]</code></pre><h1 id="获取帮助"><a href="#获取帮助" class="headerlink" title="获取帮助"></a>获取帮助</h1><p>&emsp;&emsp;若你使用 Git 时需要获取帮助，有三种方法可以找到 Git 命令的使用手册：</p><pre><code class="js">git help &lt;cmd&gt;git &lt;cmd&gt; --helpman git-&lt;cmd&gt;</code></pre><h1 id="生成本地仓库"><a href="#生成本地仓库" class="headerlink" title="生成本地仓库"></a>生成本地仓库</h1><h2 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a>初始化仓库</h2><p>&emsp;&emsp;如果是一个新的项目，则通过以下命令来初始化仓库：</p><pre><code class="js"># 进入项目cd &lt;project-name&gt;​# 初始化git init​## 也可以直接创建新项目并初始化git init &lt;project-name&gt;</code></pre><p>&emsp;&emsp;该命令将在项目根目录下创建一个名为 .git 的子目录（默认隐藏的），这个子目录含有你初始化的 Git 仓库中所有的必须文件，切勿改动删除该目录。</p><h2 id="克隆现有的仓库"><a href="#克隆现有的仓库" class="headerlink" title="克隆现有的仓库"></a>克隆现有的仓库</h2><p>&emsp;&emsp;如果你想获得一份已经存在了的 Git 仓库的拷贝，比如说，从 github 上下载一个项目，这时就要用到 git clone 命令。</p><pre><code class="js">git clone https://github.com/lin-bin</code></pre><p>&emsp;&emsp;这会在当前目录下创建一个名为 “lin-bin” 的目录，并在这个目录下初始化一个 .git 文件夹，从远程仓库拉取下所有数据放入 .git 文件夹，然后从中读取最新版本的文件的拷贝。</p><h1 id="文件跟踪"><a href="#文件跟踪" class="headerlink" title="文件跟踪"></a>文件跟踪</h1><h2 id="提交到暂存区"><a href="#提交到暂存区" class="headerlink" title="提交到暂存区"></a>提交到暂存区</h2><pre><code class="js">git add &lt;filename&gt; &lt;filename&gt;​# 添加指定类型文件到暂存区git add *.html​# 添加指定目录到暂存区git add [dir]​# 提交所有变更（包括新提交(new)和被修改(modified)文件，但不包括被删除(deleted)文件））git add .​# 添加已经被 add 且存在更改的文件（提交被修改(modified)和被删除(deleted)文件，不包括新文件(new)）git add -u​# 添加所有变化（包括新提交(new)、被修改(modified)以及被删除(deleted)文件）git add --allgit add -A # 简写​# 对于同一个文件的多处变化在提交之前进行确认，可以实现分次提交git add -p</code></pre><p>&emsp;&emsp;<font color=red>注意：运行了 git add 之后又修改了该文件，需要重新运行 git add 把最新版本重新暂存起来。</font></p><h2 id="提交到仓库"><a href="#提交到仓库" class="headerlink" title="提交到仓库"></a>提交到仓库</h2><p>&emsp;&emsp;那么该文件此时此刻的版本将被留存在历史记录中。 在此之前，请一定要确认还有什么修改过的或新建的文件还没有 git add 过，否则提交的时候不会记录这些还没暂存起来的变化。 这些修改过的文件只保留在本地磁盘。 所以，每次准备提交前，先用 git status 看下，是不是都已暂存起来了， 然后再运行提交命令 git commit：</p><pre><code class="js">git commit -m &#39;本次提交的说明&#39;​# 提交暂存区的指定文件到仓库区git commit &lt;filename1&gt; &lt;filename2&gt; ... -m &#39;本次提交的说明&#39;​# 提交时显示所有的 diff 信息git commit -v​# 使用新的 commit 替代上一次提交，如果代码没有任何变化，则用来改写上一次 commit 的提交信息git commit --amend -m &#39;需要更新的说明&#39;</code></pre><p>&emsp;&emsp;Git 提供了一个跳过使用暂存区域的方式， 只要在提交的时候，给 git commit 加上 -a 选项，Git 就会自动把所有已经跟踪过的文件暂存起来一并提交，从而跳过 git add 步骤：</p><h1 id="github注册、创建仓库、管理仓库"><a href="#github注册、创建仓库、管理仓库" class="headerlink" title="github注册、创建仓库、管理仓库"></a>github注册、创建仓库、管理仓库</h1><p>&emsp;&emsp;1、 首先需要生成密钥，打开终端输入以下：</p><pre><code class="js"># 生成密钥，一路回车，不需要设置文件名和密码,方便以后的每次连接ssh-keygen -t rsa -C &quot;你的github用户名&quot;# -t 指定密钥类型，默认是 rsa ，可以省略。# -C 设置注释文字，比如邮箱；# -f 指定密钥文件存储文件名，上面命令省略了​# 查看密钥文件夹    ls -al ~/.ssh</code></pre><p>&emsp;&emsp;密钥默认存放路径 ~/.ssh/ 路径下，可以看到生成了两个密钥文件，后缀为 .pub 的就是公钥文件，另一个没有后缀的就是私钥文件。<br>&emsp;&emsp;2、复制公钥文件中的内容；<br>&emsp;&emsp;3、然后回到 Github, 点击右上角头像的下拉按钮，选择 Settings；<br>&emsp;&emsp;4、在 Settings 页面中选择左边菜单里的 SSH and GPG keys，然后点击右上角的 New SSH key 按钮，填写 Title 和 Key，然后点击 Add SSH key 按钮提交。</p><pre><code class="js"># 验证是否成功ssh -T git@github.com</code></pre><h2 id="克隆仓库"><a href="#克隆仓库" class="headerlink" title="克隆仓库"></a>克隆仓库</h2><p>&emsp;&emsp;远程仓库中，点击 Clone or download 按钮，然后点击复制链接按钮，默认是是使用 https 协议，也可以在复制链接之前点击 Use SSH ，选择使用 SSH 协议。</p><pre><code class="js">#git clone &quot;你复制的仓库链接&quot;git clone git@github.com:lin-bin/myBlog.git</code></pre><h2 id="项目中具体克隆和推送"><a href="#项目中具体克隆和推送" class="headerlink" title="项目中具体克隆和推送"></a>项目中具体克隆和推送</h2><pre><code class="js">// 1、初始化项目// 用vs code 打开一个文件目录，用于存放项目文件，在此目录下打开终端，输入命令：git init// 2、关联远程仓库git remote add origin &quot;仓库地址&quot;// 3、同步仓库到本地git pull --rebase origin master// 4、首次推送内容（此之前先提交所有修改）git push -u origin master// 5、之后推送更新内容git push origin master</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Github </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Github </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vue中引入阿里巴巴矢量图</title>
       <link href="/myBlog/2020/02/04/vue%E4%B8%AD%E5%BC%95%E5%85%A5%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E7%9F%A2%E9%87%8F%E5%9B%BE/"/>
       <url>/myBlog/2020/02/04/vue%E4%B8%AD%E5%BC%95%E5%85%A5%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E7%9F%A2%E9%87%8F%E5%9B%BE/</url>

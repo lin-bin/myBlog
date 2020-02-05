@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>js函数中的this关键字</title>
+      <link href="/myBlog/2020/02/05/js%E5%87%BD%E6%95%B0%E4%B8%AD%E7%9A%84this%E5%85%B3%E9%94%AE%E5%AD%97/"/>
+      <url>/myBlog/2020/02/05/js%E5%87%BD%E6%95%B0%E4%B8%AD%E7%9A%84this%E5%85%B3%E9%94%AE%E5%AD%97/</url>
+      
+        <content type="html"><![CDATA[<h1 id="js-函数调用-this-的场合"><a href="#js-函数调用-this-的场合" class="headerlink" title="js 函数调用 this 的场合"></a>js 函数调用 this 的场合</h1><p>&emsp;&emsp;1、很常规的调用(即直接调用，其实你发现也是全局调用)<br>&emsp;&emsp;2、作为某个对象的方法被调用<br>&emsp;&emsp;3、作为构造函数，用来新建某个对象<br>&emsp;&emsp;4、很让人头大的 apply 调用 (在实现部分继承的时候经常这么干。)</p><h1 id="纯粹的函数调用"><a href="#纯粹的函数调用" class="headerlink" title="纯粹的函数调用"></a>纯粹的函数调用</h1><p>&emsp;&emsp;这是函数的最通常用法，属于全局性调用，因此 this 就代表全局对象 Global(在浏览器中全局对象为 window)。</p><p>&emsp;&emsp;看下面这段代码：</p><pre><code class="js">function test() {    this.name = &#39;linbing&#39;;    console.log(this.name);}test() // linbing</code></pre><p>&emsp;&emsp;在函数里调用 <code>this.name=&#39;linbing&#39;</code>，此时 <code>this</code> 在浏览器中就是 <code>window</code> 对象</p><pre><code class="js">window.name // linbing</code></pre><h1 id="作为对象方法调用"><a href="#作为对象方法调用" class="headerlink" title="作为对象方法调用"></a>作为对象方法调用</h1><p>&emsp;&emsp;函数还可以作为某个对象的方法调用，这时 this 就指这个上级对象,也来看一段代码：</p><pre><code class="js">function test(){    console.log(&quot;my name is &quot; + this.name + &quot; and y profession is &quot; + this.profession);}var person = { };person.name = &#39;linbing&#39;;person.profession = &#39;projector&#39;;person.interduce = test;person.interduce();  // my name is linbing and y profession is projector</code></pre><p>&emsp;&emsp;这里很好理解，即然是 person 在调用 test 函数，那么理所应当的 this 指向的是 person 实体，也就是说前面说的调用函数的上一级对象，它的 name 和 perfession 属性当然应该被读取出来了。</p><p>&emsp;&emsp;上面的代码可以简写为</p><pre><code class="js">var person = {    name: &#39;linbing&#39;,    profession: &#39;projector&#39;,    interduce: function(){    console.log(&quot;my name is &quot; + this.name + &quot; and y profession is &quot; + this.profession);    }person.interduce();  // my name is linbing and y profession is projector</code></pre><h1 id="作为构造函数调用"><a href="#作为构造函数调用" class="headerlink" title="作为构造函数调用"></a>作为构造函数调用</h1><p>&emsp;&emsp;所谓构造函数，就是通过这个函数生成一个新对象(object)。这时，this就指这个新对象，也来看一段代码：</p><pre><code class="js">function Person() {    this.name = &#39;linbing&#39;;}var person = new Person();console.log(person.name) // linbing</code></pre><p>&emsp;&emsp;可以看出来，this 指向的对象是刚刚新建的 person</p><h1 id="apply-调用"><a href="#apply-调用" class="headerlink" title="apply 调用"></a>apply 调用</h1><p>&emsp;&emsp;apply()是函数对象的一个方法，它的作用是改变函数 this 的指向，它的第一个参数就表示 this 要指向的对象。</p><pre><code class="js">function person(){    console.log(this.name, this.age);}var obj = {name: &#39;linbing&#39;, age: 1}person.apply(obj) // 将函数内部的 this 指向 obj, 输出 linbing 1 </code></pre><p>&emsp;&emsp;关于这个 apply，可能大多数人不太喜欢用它，要想调用某个对象直接调用不就好了么？但是应该想到，假如你想调用别人写好的某个方法，某些参数变量却要用到你自己的，怎么办？apply 和 call 就派上用场了，这也是 js 面向对象思维转换的重要一环</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> javascript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> javascript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Github</title>
       <link href="/myBlog/2020/02/04/Github/"/>
       <url>/myBlog/2020/02/04/Github/</url>

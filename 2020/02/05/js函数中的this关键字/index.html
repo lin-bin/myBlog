@@ -5,13 +5,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Github - lin</title>
+    <title>js函数中的this关键字 - lin</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="TriDiamond Obsidian,"> 
-    <meta name="description" content="林兵的个人博客,在 windows 上安装&amp;emsp;&amp;emsp;直接官网下载:https://git-scm.com/download/win
-Git 配置&amp;emsp;&amp;emsp;Git 自带一个 git con,"> 
+    <meta name="description" content="林兵的个人博客,js 函数调用 this 的场合&amp;emsp;&amp;emsp;1、很常规的调用(即直接调用，其实你发现也是全局调用)&amp;emsp;&amp;emsp;2、作为某个对象的方法被调用&amp;emsp;&amp;emsp;3、作为构造,"> 
     <meta name="author" content="林兵"> 
     <link rel="alternative" href="atom.xml" title="lin" type="application/atom+xml"> 
     <link rel="icon" href="/myBlog/myBlog/img/favicon.png"> 
@@ -58,7 +57,7 @@ Git 配置&amp;emsp;&amp;emsp;Git 自带一个 git con,">
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://lin-bin.github.io/myBlog">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">Github</h3>
+        <h3 class="subtitle">js函数中的this关键字</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -88,25 +87,25 @@ Git 配置&amp;emsp;&amp;emsp;Git 自带一个 git con,">
         <div class="else">
             <p class="animated fadeInDown">
                 
-                <a href="/categories/Github"><b>「
-                    </b>GITHUB<b> 」</b></a>
+                <a href="/categories/javascript"><b>「
+                    </b>JAVASCRIPT<b> 」</b></a>
                 
-                二月 04, 2020
+                二月 05, 2020
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/myBlog/2020/02/04/Github/" title="Github" class="">Github</a>
+            <h3 class="post-title animated fadeInDown"><a href="/myBlog/2020/02/05/js%E5%87%BD%E6%95%B0%E4%B8%AD%E7%9A%84this%E5%85%B3%E9%94%AE%E5%AD%97/" title="js函数中的this关键字" class="">js函数中的this关键字</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    5.2k
+                    2.7k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                    5 mins.
+                    2 mins.
                 </span>
                 
                 
@@ -119,7 +118,7 @@ Git 配置&amp;emsp;&amp;emsp;Git 自带一个 git con,">
             </p>
             
             
-            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/myBlog/tags/Github/" rel="tag">Github</a></li></ul>
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/myBlog/tags/javascript/" rel="tag">javascript</a></li></ul>
             
         </div>
     </div>
@@ -140,103 +139,54 @@ Git 配置&amp;emsp;&amp;emsp;Git 自带一个 git con,">
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="在-windows-上安装"><a href="#在-windows-上安装" class="headerlink" title="在 windows 上安装"></a>在 windows 上安装</h1><p>&emsp;&emsp;直接官网下载:<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a></p>
-<h1 id="Git-配置"><a href="#Git-配置" class="headerlink" title="Git 配置"></a>Git 配置</h1><p>&emsp;&emsp;Git 自带一个 git config 的工具来帮助设置控制 Git 外观和行为的配置变量。 这些变量存储在三个不同的位置：</p>
-<p>&emsp;&emsp;1、 /etc/gitconfig 文件: 包含系统上每一个用户及他们仓库的通用配置。 如果使用带有 –system 选项的 git config 时，它会从此文件读写配置变量。</p>
-<p>&emsp;&emsp;2、 ~/.gitconfig 或 ~/.config/git/config 文件：只针对当前用户。 可以传递 –global 选项让 Git 读写此文件。</p>
-<p>&emsp;&emsp;3、 当前使用仓库的 Git 目录中的 config 文件（就是 .git/config）：针对该仓库。每一个级别覆盖上一级别的配置，所以 .git/config 的配置变量会覆盖 /etc/gitconfig 中的配置变量。</p>
-<h1 id="配置用户名与邮箱"><a href="#配置用户名与邮箱" class="headerlink" title="配置用户名与邮箱"></a>配置用户名与邮箱</h1><p>&emsp;&emsp;当安装完 Git 应该做的第一件事就是设置你的用户名称与邮件地址。 这样做很重要，因为每一个 Git 的提交都会使用这些信息，并且它会写入到你的每一次提交中，不可更改：</p>
-<pre><code class="js"># 如果想设置为全局生效，添加 --global 参数
-git config [--global] user.name &quot;你的用户名&quot;
-git config [--global] user.email &quot;你的邮箱&quot;</code></pre>
-<p>&emsp;&emsp;当你想针对特定项目使用不同的用户名称与邮件地址时，可以在那个项目目录下运行没有 –global 选项的命令来配置。</p>
-<h1 id="检查配置信息"><a href="#检查配置信息" class="headerlink" title="检查配置信息"></a>检查配置信息</h1><pre><code class="js"># 显示当前的 Git 配置
-git config --list
-​
-# 编辑 Git 配置文件
-git config -e [--global]</code></pre>
-<h1 id="获取帮助"><a href="#获取帮助" class="headerlink" title="获取帮助"></a>获取帮助</h1><p>&emsp;&emsp;若你使用 Git 时需要获取帮助，有三种方法可以找到 Git 命令的使用手册：</p>
-<pre><code class="js">git help &lt;cmd&gt;
+            <h1 id="js-函数调用-this-的场合"><a href="#js-函数调用-this-的场合" class="headerlink" title="js 函数调用 this 的场合"></a>js 函数调用 this 的场合</h1><p>&emsp;&emsp;1、很常规的调用(即直接调用，其实你发现也是全局调用)<br>&emsp;&emsp;2、作为某个对象的方法被调用<br>&emsp;&emsp;3、作为构造函数，用来新建某个对象<br>&emsp;&emsp;4、很让人头大的 apply 调用 (在实现部分继承的时候经常这么干。)</p>
+<h1 id="纯粹的函数调用"><a href="#纯粹的函数调用" class="headerlink" title="纯粹的函数调用"></a>纯粹的函数调用</h1><p>&emsp;&emsp;这是函数的最通常用法，属于全局性调用，因此 this 就代表全局对象 Global(在浏览器中全局对象为 window)。</p>
+<p>&emsp;&emsp;看下面这段代码：</p>
+<pre><code class="js">function test() {
+    this.name = &#39;linbing&#39;;
+    console.log(this.name);
+}
 
-git &lt;cmd&gt; --help
+test() // linbing</code></pre>
+<p>&emsp;&emsp;在函数里调用 <code>this.name=&#39;linbing&#39;</code>，此时 <code>this</code> 在浏览器中就是 <code>window</code> 对象</p>
+<pre><code class="js">window.name // linbing</code></pre>
+<h1 id="作为对象方法调用"><a href="#作为对象方法调用" class="headerlink" title="作为对象方法调用"></a>作为对象方法调用</h1><p>&emsp;&emsp;函数还可以作为某个对象的方法调用，这时 this 就指这个上级对象,也来看一段代码：</p>
+<pre><code class="js">function test(){
+    console.log(&quot;my name is &quot; + this.name + &quot; and y profession is &quot; + this.profession);
+}
+var person = { };
+person.name = &#39;linbing&#39;;
+person.profession = &#39;projector&#39;;
+person.interduce = test;
+person.interduce();  // my name is linbing and y profession is projector
+</code></pre>
+<p>&emsp;&emsp;这里很好理解，即然是 person 在调用 test 函数，那么理所应当的 this 指向的是 person 实体，也就是说前面说的调用函数的上一级对象，它的 name 和 perfession 属性当然应该被读取出来了。</p>
+<p>&emsp;&emsp;上面的代码可以简写为</p>
+<pre><code class="js">var person = {
+    name: &#39;linbing&#39;,
+    profession: &#39;projector&#39;,
+    interduce: function(){
+    console.log(&quot;my name is &quot; + this.name + &quot; and y profession is &quot; + this.profession);
+    }
+person.interduce();  // my name is linbing and y profession is projector
 
-man git-&lt;cmd&gt;</code></pre>
-<h1 id="生成本地仓库"><a href="#生成本地仓库" class="headerlink" title="生成本地仓库"></a>生成本地仓库</h1><h2 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a>初始化仓库</h2><p>&emsp;&emsp;如果是一个新的项目，则通过以下命令来初始化仓库：</p>
-<pre><code class="js"># 进入项目
-cd &lt;project-name&gt;
-​
-# 初始化
-git init
-​
-## 也可以直接创建新项目并初始化
-git init &lt;project-name&gt;</code></pre>
-<p>&emsp;&emsp;该命令将在项目根目录下创建一个名为 .git 的子目录（默认隐藏的），这个子目录含有你初始化的 Git 仓库中所有的必须文件，切勿改动删除该目录。</p>
-<h2 id="克隆现有的仓库"><a href="#克隆现有的仓库" class="headerlink" title="克隆现有的仓库"></a>克隆现有的仓库</h2><p>&emsp;&emsp;如果你想获得一份已经存在了的 Git 仓库的拷贝，比如说，从 github 上下载一个项目，这时就要用到 git clone 命令。</p>
-<pre><code class="js">git clone https://github.com/lin-bin</code></pre>
-<p>&emsp;&emsp;这会在当前目录下创建一个名为 “lin-bin” 的目录，并在这个目录下初始化一个 .git 文件夹，从远程仓库拉取下所有数据放入 .git 文件夹，然后从中读取最新版本的文件的拷贝。</p>
-<h1 id="文件跟踪"><a href="#文件跟踪" class="headerlink" title="文件跟踪"></a>文件跟踪</h1><h2 id="提交到暂存区"><a href="#提交到暂存区" class="headerlink" title="提交到暂存区"></a>提交到暂存区</h2><pre><code class="js">git add &lt;filename&gt; &lt;filename&gt;
-​
-# 添加指定类型文件到暂存区
-git add *.html
-​
-# 添加指定目录到暂存区
-git add [dir]
-​
-# 提交所有变更（包括新提交(new)和被修改(modified)文件，但不包括被删除(deleted)文件））
-git add .
-​
-# 添加已经被 add 且存在更改的文件（提交被修改(modified)和被删除(deleted)文件，不包括新文件(new)）
-git add -u
-​
-# 添加所有变化（包括新提交(new)、被修改(modified)以及被删除(deleted)文件）
-git add --all
-git add -A # 简写
-​
-# 对于同一个文件的多处变化在提交之前进行确认，可以实现分次提交
-git add -p</code></pre>
-<p>&emsp;&emsp;<font color=red>注意：运行了 git add 之后又修改了该文件，需要重新运行 git add 把最新版本重新暂存起来。</font></p>
-<h2 id="提交到仓库"><a href="#提交到仓库" class="headerlink" title="提交到仓库"></a>提交到仓库</h2><p>&emsp;&emsp;那么该文件此时此刻的版本将被留存在历史记录中。 在此之前，请一定要确认还有什么修改过的或新建的文件还没有 git add 过，否则提交的时候不会记录这些还没暂存起来的变化。 这些修改过的文件只保留在本地磁盘。 所以，每次准备提交前，先用 git status 看下，是不是都已暂存起来了， 然后再运行提交命令 git commit：</p>
-<pre><code class="js">git commit -m &#39;本次提交的说明&#39;
-​
-# 提交暂存区的指定文件到仓库区
-git commit &lt;filename1&gt; &lt;filename2&gt; ... -m &#39;本次提交的说明&#39;
-​
-# 提交时显示所有的 diff 信息
-git commit -v
-​
-# 使用新的 commit 替代上一次提交，如果代码没有任何变化，则用来改写上一次 commit 的提交信息
-git commit --amend -m &#39;需要更新的说明&#39;</code></pre>
-<p>&emsp;&emsp;Git 提供了一个跳过使用暂存区域的方式， 只要在提交的时候，给 git commit 加上 -a 选项，Git 就会自动把所有已经跟踪过的文件暂存起来一并提交，从而跳过 git add 步骤：</p>
-<h1 id="github注册、创建仓库、管理仓库"><a href="#github注册、创建仓库、管理仓库" class="headerlink" title="github注册、创建仓库、管理仓库"></a>github注册、创建仓库、管理仓库</h1><p>&emsp;&emsp;1、 首先需要生成密钥，打开终端输入以下：</p>
-<pre><code class="js"># 生成密钥，一路回车，不需要设置文件名和密码,方便以后的每次连接
-ssh-keygen -t rsa -C &quot;你的github用户名&quot;
-# -t 指定密钥类型，默认是 rsa ，可以省略。
-# -C 设置注释文字，比如邮箱；
-# -f 指定密钥文件存储文件名，上面命令省略了
-​
-# 查看密钥文件夹    
-ls -al ~/.ssh</code></pre>
-<p>&emsp;&emsp;密钥默认存放路径 ~/.ssh/ 路径下，可以看到生成了两个密钥文件，后缀为 .pub 的就是公钥文件，另一个没有后缀的就是私钥文件。<br>&emsp;&emsp;2、复制公钥文件中的内容；<br>&emsp;&emsp;3、然后回到 Github, 点击右上角头像的下拉按钮，选择 Settings；<br>&emsp;&emsp;4、在 Settings 页面中选择左边菜单里的 SSH and GPG keys，然后点击右上角的 New SSH key 按钮，填写 Title 和 Key，然后点击 Add SSH key 按钮提交。</p>
-<pre><code class="js"># 验证是否成功
-ssh -T git@github.com</code></pre>
-<h2 id="克隆仓库"><a href="#克隆仓库" class="headerlink" title="克隆仓库"></a>克隆仓库</h2><p>&emsp;&emsp;远程仓库中，点击 Clone or download 按钮，然后点击复制链接按钮，默认是是使用 https 协议，也可以在复制链接之前点击 Use SSH ，选择使用 SSH 协议。</p>
-<pre><code class="js">#git clone &quot;你复制的仓库链接&quot;
-git clone git@github.com:lin-bin/myBlog.git</code></pre>
-<h2 id="项目中具体克隆和推送"><a href="#项目中具体克隆和推送" class="headerlink" title="项目中具体克隆和推送"></a>项目中具体克隆和推送</h2><pre><code class="js">// 1、初始化项目
-// 用vs code 打开一个文件目录，用于存放项目文件，在此目录下打开终端，输入命令：
-git init
-
-// 2、关联远程仓库
-git remote add origin &quot;仓库地址&quot;
-
-// 3、同步仓库到本地
-git pull --rebase origin master
-
-// 4、首次推送内容（此之前先提交所有修改）
-git push -u origin master
-
-// 5、之后推送更新内容
-git push origin master</code></pre>
+</code></pre>
+<h1 id="作为构造函数调用"><a href="#作为构造函数调用" class="headerlink" title="作为构造函数调用"></a>作为构造函数调用</h1><p>&emsp;&emsp;所谓构造函数，就是通过这个函数生成一个新对象(object)。这时，this就指这个新对象，也来看一段代码：</p>
+<pre><code class="js">function Person() {
+    this.name = &#39;linbing&#39;;
+}
+var person = new Person();
+console.log(person.name) // linbing
+</code></pre>
+<p>&emsp;&emsp;可以看出来，this 指向的对象是刚刚新建的 person</p>
+<h1 id="apply-调用"><a href="#apply-调用" class="headerlink" title="apply 调用"></a>apply 调用</h1><p>&emsp;&emsp;apply()是函数对象的一个方法，它的作用是改变函数 this 的指向，它的第一个参数就表示 this 要指向的对象。</p>
+<pre><code class="js">function person(){
+    console.log(this.name, this.age);
+}
+var obj = {name: &#39;linbing&#39;, age: 1}
+person.apply(obj) // 将函数内部的 this 指向 obj, 输出 linbing 1 
+</code></pre>
+<p>&emsp;&emsp;关于这个 apply，可能大多数人不太喜欢用它，要想调用某个对象直接调用不就好了么？但是应该想到，假如你想调用别人写好的某个方法，某些参数变量却要用到你自己的，怎么办？apply 和 call 就派上用场了，这也是 js 面向对象思维转换的重要一环</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
@@ -282,7 +232,7 @@ git push origin master</code></pre>
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>目录</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#在-windows-上安装"><span class="toc-number">1.</span> <span class="toc-text">在 windows 上安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-配置"><span class="toc-number">2.</span> <span class="toc-text">Git 配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置用户名与邮箱"><span class="toc-number">3.</span> <span class="toc-text">配置用户名与邮箱</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#检查配置信息"><span class="toc-number">4.</span> <span class="toc-text">检查配置信息</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#获取帮助"><span class="toc-number">5.</span> <span class="toc-text">获取帮助</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#生成本地仓库"><span class="toc-number">6.</span> <span class="toc-text">生成本地仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化仓库"><span class="toc-number">6.1.</span> <span class="toc-text">初始化仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#克隆现有的仓库"><span class="toc-number">6.2.</span> <span class="toc-text">克隆现有的仓库</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文件跟踪"><span class="toc-number">7.</span> <span class="toc-text">文件跟踪</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#提交到暂存区"><span class="toc-number">7.1.</span> <span class="toc-text">提交到暂存区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#提交到仓库"><span class="toc-number">7.2.</span> <span class="toc-text">提交到仓库</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#github注册、创建仓库、管理仓库"><span class="toc-number">8.</span> <span class="toc-text">github注册、创建仓库、管理仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#克隆仓库"><span class="toc-number">8.1.</span> <span class="toc-text">克隆仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目中具体克隆和推送"><span class="toc-number">8.2.</span> <span class="toc-text">项目中具体克隆和推送</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#js-函数调用-this-的场合"><span class="toc-number">1.</span> <span class="toc-text">js 函数调用 this 的场合</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#纯粹的函数调用"><span class="toc-number">2.</span> <span class="toc-text">纯粹的函数调用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#作为对象方法调用"><span class="toc-number">3.</span> <span class="toc-text">作为对象方法调用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#作为构造函数调用"><span class="toc-number">4.</span> <span class="toc-text">作为构造函数调用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#apply-调用"><span class="toc-number">5.</span> <span class="toc-text">apply 调用</span></a></li></ol>
                 </div>
             </div>
             

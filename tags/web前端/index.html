@@ -5,13 +5,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>认识 vue - lin</title>
+    <title>Tag: web前端 - lin</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="TriDiamond Obsidian,"> 
-    <meta name="description" content="林兵的个人博客,认识 Vue&amp;emsp;&amp;emsp;SPA（单页WEB应用）：也就是只有一个 web 页面。
-第一步：引入框架  &amp;lt;script src=&amp;quot;vue.js&amp;quot;&amp;gt;&amp;lt;/,"> 
+    <meta name="description" content="林兵的个人博客,"> 
     <meta name="author" content="林兵"> 
     <link rel="alternative" href="atom.xml" title="lin" type="application/atom+xml"> 
     <link rel="icon" href="/myBlog/myBlog/img/favicon.png"> 
@@ -51,78 +50,131 @@
     </div>
     <span id="config-title" style="display:none">lin</span>
     <div id="loader"></div>
-    <div id="single">
-    <div class="scrollbar gradient-bg-rev"></div>
-<div id="top" style="display: block;">
-    <div class="bar" style="width: 0;"></div>
-    <div class="navigation animated fadeIn fast delay-1s">
-        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://lin-bin.github.io/myBlog">
-        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">认识 vue</h3>
-        <div class="social">
-            <!--        <div class="like-icon">-->
-            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
-            <!--        </div>-->
-            <div>
-                <div class="share">
-                    
-                        <a href="javascript:;" class="iconfont icon-share1"></a>
-                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
-                    
-                </div>
-            </div>
+    <div class="nav">
+    <ul id="menu-menu" class="menu">
+        
+        <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/myBlog/personal/" title="ABOUT" external="false">ABOUT</a>
+        </li>
+        
+        <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/myBlog/categories/" title="CATEGORIES" external="false">CATEGORIES</a>
+        </li>
+        
+        <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/myBlog/tags/" title="TAGS" external="false">TAGS</a>
+        </li>
+        
+        <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/myBlog/archives/" title="ARCHIVES" external="false">ARCHIVES</a>
+        </li>
+        
+    </ul>
+    <p class="copyright" id="copyright">
+        &copy; 2020 林兵.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+    </p>
+</div>
+
+<div id="container">
+    
+<div class="search-box">
+    <form class="site-search-form">
+        <span class="iconfont icon-search"></span>
+        <input type="text" id="local-search-input" class="st-search-input" />
+        <div class="iconfont icon-cross search-box-close"></div>
+    </form>
+    <div class="search-scrollable">
+        <div id="local-search-result" class="local-search-result-cls" data-initialise="首次搜索，正在载入索引文件，请稍后……"
+            data-start="输入关键词搜索。" data-empty="没有找到内容，请尝试更换检索词。">
+            <span>输入关键词搜索。</span>
         </div>
     </div>
 </div>
-
-    <div class="section">
-        <div class=article-header-wrapper>
-    <div class="article-header">
-        <div class="article-cover animated fadeIn" style="
-            animation-delay: 600ms;
-            animation-duration: 1.2s;
-            background-image: 
-                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-                url(/myBlog/img/cover.jpg);">
+<div id="header">
+    <div>
+        <div class="logo animated fadeInDown">
+            <img src="/img/favicon.png" alt="">
+            <a class="image-logo" href="/"></a>
         </div>
-        <div class="else">
-            <p class="animated fadeInDown">
-                
-                <a href="/categories/vue"><b>「
-                    </b>VUE<b> 」</b></a>
-                
-                二月 01, 2020
-            </p>
-            <h3 class="post-title animated fadeInDown"><a href="/myBlog/2020/02/01/%E8%AE%A4%E8%AF%86vue/" title="认识 vue" class="">认识 vue</a>
-            </h3>
+        <ul id="menu-menu" class="menu text-menu">
             
-            <p class="post-count animated fadeInDown">
-                
-                <span>
-                    <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    1.1k
-                </span>
-                
-                
-                <span>
-                    <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                    1 mins.
-                </span>
-                
-                
-                
-                <span id="busuanzi_container_page_pv">
-                    <b class="iconfont icon-read"></b> <i>阅读次数</i>
-                    <span id="busuanzi_value_page_pv">0</span>
-                </span>
-                
-            </p>
+            <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                <a href="/myBlog/personal/" title="ABOUT" external="false" class="menu-link">ABOUT</a>
+            </li>
+            
+            <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                <a href="/myBlog/categories/" title="CATEGORIES" external="false" class="menu-link">CATEGORIES</a>
+            </li>
+            
+            <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                <a href="/myBlog/tags/" title="TAGS" external="false" class="menu-link">TAGS</a>
+            </li>
+            
+            <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                <a href="/myBlog/archives/" title="ARCHIVES" external="false" class="menu-link">ARCHIVES</a>
+            </li>
             
             
-            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/myBlog/tags/vue/" rel="tag">vue</a></li></ul>
+            <li class="animated fadeInDown search-bar iconfont icon-search"></li>
             
+        </ul>
+        <div class="iconfont icon-menu switchmenu gradient-text animated fadeInDown"></div>
+    </div>
+</div>
+<div id="screen">
+    <div id="mark">
+        <div class="cover animated fadeIn" style="
+            animation-delay: 900ms;
+            animation-duration: 2.8s;
+            background-image:
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.56), #100e17),
+                url(/img/cover.jpg);">
         </div>
     </div>
+    
+    <div id="post0" class="else">
+        <p class="animated fadeInDown">
+            
+            <a href="/categories/web前端"><b>「
+                </b>WEB前端<b> 」</b></a>
+            
+            二月 07, 2020
+        </p>
+        <h3 class="post-title animated fadeInDown">
+            <a href="/myBlog/2020/02/07/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/" title="浏览器兼容问题" class="posttitle">浏览器兼容问题</a></h3>
+        
+        <p class="post-count animated fadeInDown">
+            
+            <span>
+                <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                2.7k
+            </span>
+            
+            
+            <span>
+                <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                2 mins.
+            </span>
+            
+            
+        </p>
+        
+        
+        <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/myBlog/tags/web%E5%89%8D%E7%AB%AF/" rel="tag">web前端</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/myBlog/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" rel="tag">浏览器</a></li></ul>
+        
+        <div class="md-content animated fadeIn">
+            
+            <p>常见的兼容性问题：</p>
+<p>&emsp;&emsp;解决方案： css 里增加通配符 <code>* { margin: 0; padding: 0; }</code></p>
+<p>&emsp;&emsp;解决方案：设置 <code>display:inline...</code></p>
+            
+            <span class="read-more"><a href="/myBlog/2020/02/07/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/" title="查看全文" class="posttitle">查看全文</a>
+                <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+    
 </div>
 
 <div class="screen-gradient-after">
@@ -130,94 +182,21 @@
         <div class="screen-gradient-content-inside">
             <div class="bold-underline-links screen-gradient-sponsor">
                 <p>
-                    <span class="animated fadeIn delay-1s"></span>
+                    <span class="typed-text"></span>
                 </p>
             </div>
         </div>
     </div>
 </div>
 
-<div class="article">
-    <div class='main'>
-        <div class="content markdown animated fadeIn">
-            <h1 id="认识-Vue"><a href="#认识-Vue" class="headerlink" title="认识 Vue"></a>认识 Vue</h1><p>&emsp;&emsp;SPA（单页WEB应用）：也就是只有一个 web 页面。</p>
-<h2 id="第一步：引入框架"><a href="#第一步：引入框架" class="headerlink" title="第一步：引入框架"></a>第一步：引入框架</h2><pre><code class="html">  &lt;script src=&quot;vue.js&quot;&gt;&lt;/script&gt;</code></pre>
-<h2 id="第二步：使用框架"><a href="#第二步：使用框架" class="headerlink" title="第二步：使用框架"></a>第二步：使用框架</h2><pre><code class="js">new Vue({
-el:&quot;对象的id&quot;,
-data:{// 数据中心
-},
-watch：{// 用于监听属性值的变化
-
-},
-computed：{// 计算属性，主要是用来对原数据进行改造输出，类似于方法，，在数据变化时，会同步更新，相对于方法来讲，依赖于数据变化时，才会重新计算，而方法在每次调用时都会重新计算，所以比方法性能高
-},
-filters：{// 过滤器，对数据进行过滤处理
-
-},
-methods:{// 在这里定义所有函数
-
-}
-})</code></pre>
-<h1 id="服务器渲染-vs-客户端渲染"><a href="#服务器渲染-vs-客户端渲染" class="headerlink" title="服务器渲染 vs 客户端渲染"></a>服务器渲染 vs 客户端渲染</h1><img src='1.png'>
-
-<h1 id="前后端分离"><a href="#前后端分离" class="headerlink" title="前后端分离"></a>前后端分离</h1><p>&emsp;&emsp;（PC端、移动端 web、原生 APP）<br>&emsp;&emsp;系统分离后，同一个后端系统，只需要提供一套接口（如：“url”，POST）<br><img src='2.png'></p>
-<h1 id="开发模式"><a href="#开发模式" class="headerlink" title="开发模式"></a>开发模式</h1><img src='3.png'>
-
-            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
-            <audio id="audio" loop="1" preload="auto" controls="controls"
-                data-autoplay="true">
-                <source type="audio/mpeg" src="">
-            </audio>
-            
-            <ul id="audio-list" style="display:none">
-                
-                
-                <li title='0' data-url='/myBlog/statics/shijianmeihaoyunihuanhuanxiangkou.mp3'></li>
-                
-                    
-            </ul>
-            
-            
-            
-        </div>
-        <div class="sidebar">
-            <div class="box animated fadeInRight">
-                <div class="subbox">
-                    <img src="/myBlog/img/lai.jpg" height=300 width=300></img>
-                    <p>林兵</p>
-                    <span>what hurts more，the pain of hard work or the pain of regret</span>
-                    <dl>
-                        <dd><a href="https://github.com/lin-bin/myBlog" target="_blank"><span
-                                    class=" iconfont icon-github"></span></a></dd>
-                        <dd><a href="" target="_blank"><span
-                                    class=" iconfont icon-twitter"></span></a></dd>
-                        <dd><a href="" target="_blank"><span
-                                    class=" iconfont icon-stack-overflow"></span></a></dd>
-                    </dl>
-                </div>
-                <ul>
-                    <li><a href="/">9 <p>文章</p></a></li>
-                    <li><a href="/categories">6 <p>分类</p></a></li>
-                    <li><a href="/tags">9 <p>标签</p></a></li>
-                </ul>
-            </div>
-            
-            
-            
-            <div class="box sticky animated fadeInRight faster">
-                <div id="toc" class="subbox">
-                    <h4>目录</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#认识-Vue"><span class="toc-number">1.</span> <span class="toc-text">认识 Vue</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一步：引入框架"><span class="toc-number">1.1.</span> <span class="toc-text">第一步：引入框架</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二步：使用框架"><span class="toc-number">1.2.</span> <span class="toc-text">第二步：使用框架</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#服务器渲染-vs-客户端渲染"><span class="toc-number">2.</span> <span class="toc-text">服务器渲染 vs 客户端渲染</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#前后端分离"><span class="toc-number">3.</span> <span class="toc-text">前后端分离</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#开发模式"><span class="toc-number">4.</span> <span class="toc-text">开发模式</span></a></li></ol>
-                </div>
-            </div>
-            
-            
-        </div>
+    <div id="primary">
+        
     </div>
+    
 </div>
+<div id="preview"></div>
 
-    </div>
-</div>
+
     <div id="back-to-top" class="animated fadeIn faster">
         <div class="flow"></div>
         <span class="percentage animated fadeIn faster">0%</span>

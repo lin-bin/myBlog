@@ -99,13 +99,13 @@
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    2.7k
+                    3.2k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                    2 mins.
+                    3 mins.
                 </span>
                 
                 
@@ -187,6 +187,27 @@ var obj = {name: &#39;linbing&#39;, age: 1}
 person.apply(obj) // 将函数内部的 this 指向 obj, 输出 linbing 1 
 </code></pre>
 <p>&emsp;&emsp;关于这个 apply，可能大多数人不太喜欢用它，要想调用某个对象直接调用不就好了么？但是应该想到，假如你想调用别人写好的某个方法，某些参数变量却要用到你自己的，怎么办？apply 和 call 就派上用场了，这也是 js 面向对象思维转换的重要一环</p>
+<h1 id="借来的-this"><a href="#借来的-this" class="headerlink" title="借来的 this"></a>借来的 this</h1><p>&emsp;&emsp;可以借助一些手法手动修改 this 的指向</p>
+<pre><code class="js">&gt;&gt; fn.call（对象，参数1，参数2...）：将函数的上下文环境切换到另一个对象中
+注意：
+该函数会立即执行
+执行一次
+临时性的
+
+&gt;&gt; fn.apply（对象，[参数1，参数2...]）
+用法同 call，只是传参方式不一样
+
+&gt;&gt; fn.bind（对象）
+被动修改 this 的指向，一般用于修改回调函数的 this 指向
+
+
+&gt;&gt; call、apply、bind 的区别：
+相同点：都是用于改变函数中 this 的指向
+不同点：
+call、apply 都是立即执行（主动），用于一般函数
+bind 是被动执行，通常用于回调函数
+call 直接将参数列举在对象的后面
+apply 是以数组的形式传递参数</code></pre>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
@@ -221,9 +242,9 @@ person.apply(obj) // 将函数内部的 this 指向 obj, 输出 linbing 1
                     </dl>
                 </div>
                 <ul>
-                    <li><a href="/">8 <p>文章</p></a></li>
-                    <li><a href="/categories">5 <p>分类</p></a></li>
-                    <li><a href="/tags">7 <p>标签</p></a></li>
+                    <li><a href="/">9 <p>文章</p></a></li>
+                    <li><a href="/categories">6 <p>分类</p></a></li>
+                    <li><a href="/tags">9 <p>标签</p></a></li>
                 </ul>
             </div>
             
@@ -232,7 +253,7 @@ person.apply(obj) // 将函数内部的 this 指向 obj, 输出 linbing 1
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>目录</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#js-函数调用-this-的场合"><span class="toc-number">1.</span> <span class="toc-text">js 函数调用 this 的场合</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#纯粹的函数调用"><span class="toc-number">2.</span> <span class="toc-text">纯粹的函数调用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#作为对象方法调用"><span class="toc-number">3.</span> <span class="toc-text">作为对象方法调用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#作为构造函数调用"><span class="toc-number">4.</span> <span class="toc-text">作为构造函数调用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#apply-调用"><span class="toc-number">5.</span> <span class="toc-text">apply 调用</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#js-函数调用-this-的场合"><span class="toc-number">1.</span> <span class="toc-text">js 函数调用 this 的场合</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#纯粹的函数调用"><span class="toc-number">2.</span> <span class="toc-text">纯粹的函数调用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#作为对象方法调用"><span class="toc-number">3.</span> <span class="toc-text">作为对象方法调用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#作为构造函数调用"><span class="toc-number">4.</span> <span class="toc-text">作为构造函数调用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#apply-调用"><span class="toc-number">5.</span> <span class="toc-text">apply 调用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#借来的-this"><span class="toc-number">6.</span> <span class="toc-text">借来的 this</span></a></li></ol>
                 </div>
             </div>
             

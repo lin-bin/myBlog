@@ -5,13 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>认识 vue - lin</title>
+    <title>浏览器兼容问题 - lin</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="TriDiamond Obsidian,"> 
-    <meta name="description" content="林兵的个人博客,认识 Vue&amp;emsp;&amp;emsp;SPA（单页WEB应用）：也就是只有一个 web 页面。
-第一步：引入框架  &amp;lt;script src=&amp;quot;vue.js&amp;quot;&amp;gt;&amp;lt;/,"> 
+    <meta name="description" content="林兵的个人博客,常见的兼容性问题：
+不同浏览器的标签默认的外边距 margin 和内边距 padding 不同&amp;emsp;&amp;emsp;解决方案： css 里增加通配符 * { margin: 0; padding:,"> 
     <meta name="author" content="林兵"> 
     <link rel="alternative" href="atom.xml" title="lin" type="application/atom+xml"> 
     <link rel="icon" href="/myBlog/myBlog/img/favicon.png"> 
@@ -58,7 +58,7 @@
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://lin-bin.github.io/myBlog">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">认识 vue</h3>
+        <h3 class="subtitle">浏览器兼容问题</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -88,25 +88,25 @@
         <div class="else">
             <p class="animated fadeInDown">
                 
-                <a href="/categories/vue"><b>「
-                    </b>VUE<b> 」</b></a>
+                <a href="/categories/web前端"><b>「
+                    </b>WEB前端<b> 」</b></a>
                 
-                二月 01, 2020
+                二月 07, 2020
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/myBlog/2020/02/01/%E8%AE%A4%E8%AF%86vue/" title="认识 vue" class="">认识 vue</a>
+            <h3 class="post-title animated fadeInDown"><a href="/myBlog/2020/02/07/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/" title="浏览器兼容问题" class="">浏览器兼容问题</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    1.1k
+                    2.7k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                    1 mins.
+                    2 mins.
                 </span>
                 
                 
@@ -119,7 +119,7 @@
             </p>
             
             
-            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/myBlog/tags/vue/" rel="tag">vue</a></li></ul>
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/myBlog/tags/web%E5%89%8D%E7%AB%AF/" rel="tag">web前端</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/myBlog/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" rel="tag">浏览器</a></li></ul>
             
         </div>
     </div>
@@ -140,28 +140,16 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="认识-Vue"><a href="#认识-Vue" class="headerlink" title="认识 Vue"></a>认识 Vue</h1><p>&emsp;&emsp;SPA（单页WEB应用）：也就是只有一个 web 页面。</p>
-<h2 id="第一步：引入框架"><a href="#第一步：引入框架" class="headerlink" title="第一步：引入框架"></a>第一步：引入框架</h2><pre><code class="html">  &lt;script src=&quot;vue.js&quot;&gt;&lt;/script&gt;</code></pre>
-<h2 id="第二步：使用框架"><a href="#第二步：使用框架" class="headerlink" title="第二步：使用框架"></a>第二步：使用框架</h2><pre><code class="js">new Vue({
-el:&quot;对象的id&quot;,
-data:{// 数据中心
-},
-watch：{// 用于监听属性值的变化
-
-},
-computed：{// 计算属性，主要是用来对原数据进行改造输出，类似于方法，，在数据变化时，会同步更新，相对于方法来讲，依赖于数据变化时，才会重新计算，而方法在每次调用时都会重新计算，所以比方法性能高
-},
-filters：{// 过滤器，对数据进行过滤处理
-
-},
-methods:{// 在这里定义所有函数
-
-}
-})</code></pre>
-<h1 id="服务器渲染-vs-客户端渲染"><a href="#服务器渲染-vs-客户端渲染" class="headerlink" title="服务器渲染 vs 客户端渲染"></a>服务器渲染 vs 客户端渲染</h1><img src='1.png'>
-
-<h1 id="前后端分离"><a href="#前后端分离" class="headerlink" title="前后端分离"></a>前后端分离</h1><p>&emsp;&emsp;（PC端、移动端 web、原生 APP）<br>&emsp;&emsp;系统分离后，同一个后端系统，只需要提供一套接口（如：“url”，POST）<br><img src='2.png'></p>
-<h1 id="开发模式"><a href="#开发模式" class="headerlink" title="开发模式"></a>开发模式</h1><img src='3.png'>
+            <p>常见的兼容性问题：</p>
+<h1 id="不同浏览器的标签默认的外边距-margin-和内边距-padding-不同"><a href="#不同浏览器的标签默认的外边距-margin-和内边距-padding-不同" class="headerlink" title="不同浏览器的标签默认的外边距 margin 和内边距 padding 不同"></a>不同浏览器的标签默认的外边距 <code>margin</code> 和内边距 <code>padding</code> 不同</h1><p>&emsp;&emsp;解决方案： css 里增加通配符 <code>* { margin: 0; padding: 0; }</code></p>
+<h1 id="IE6双边距问题；在-IE6中设置了-float-同时又设置-margin-就会出现边距问题"><a href="#IE6双边距问题；在-IE6中设置了-float-同时又设置-margin-就会出现边距问题" class="headerlink" title="IE6双边距问题；在 IE6中设置了 float , 同时又设置 margin , 就会出现边距问题"></a>IE6双边距问题；在 IE6中设置了 <code>float</code> , 同时又设置 <code>margin</code> , 就会出现边距问题</h1><p>&emsp;&emsp;解决方案：设置 <code>display:inline</code> ;</p>
+<h1 id="当标签的高度设置小于10px，在IE6、IE7中会超出自己设置的高度"><a href="#当标签的高度设置小于10px，在IE6、IE7中会超出自己设置的高度" class="headerlink" title="当标签的高度设置小于10px，在IE6、IE7中会超出自己设置的高度"></a>当标签的高度设置小于10px，在IE6、IE7中会超出自己设置的高度</h1><p>&emsp;&emsp;解决方案：超出高度的标签设置 <code>overflow:hidden</code>,或者设置 <code>line-height</code> 的值小于你的设置高度</p>
+<h1 id="图片默认有间距"><a href="#图片默认有间距" class="headerlink" title="图片默认有间距"></a>图片默认有间距</h1><p>&emsp;&emsp;解决方案：使用 <code>float</code> 为 img 布局</p>
+<h1 id="IE9一下浏览器不能使用opacity"><a href="#IE9一下浏览器不能使用opacity" class="headerlink" title="IE9一下浏览器不能使用opacity"></a>IE9一下浏览器不能使用opacity</h1><p>&emsp;&emsp;解决方案：<code>opacity: 0.5;filter: alpha(opacity = 50);filter: progid:DXImageTransform.Microsoft.Alpha(style = 0, opacity = 50);</code></p>
+<h1 id="边距重叠问题；当相邻两个元素都设置了margin-边距时，margin-将取最大值，舍弃最小值；"><a href="#边距重叠问题；当相邻两个元素都设置了margin-边距时，margin-将取最大值，舍弃最小值；" class="headerlink" title="边距重叠问题；当相邻两个元素都设置了margin 边距时，margin 将取最大值，舍弃最小值；"></a>边距重叠问题；当相邻两个元素都设置了margin 边距时，margin 将取最大值，舍弃最小值；</h1><p>&emsp;&emsp;解决方案：为了不让边重叠，可以给子元素增加一个父级元素，并设置父级元素为 <code>overflow:hidden；</code></p>
+<h1 id="cursor-hand-显示手型在safari-上不支持"><a href="#cursor-hand-显示手型在safari-上不支持" class="headerlink" title="cursor:hand 显示手型在safari 上不支持"></a>cursor:hand 显示手型在safari 上不支持</h1><p>&emsp;&emsp;解决方案：统一使用 <code>cursor:pointer</code></p>
+<h1 id="两个块级元素，父元素设置了overflow-auto；子元素设置了position-relative-且高度大于父元素，在IE6、IE7会被隐藏而不是溢出；"><a href="#两个块级元素，父元素设置了overflow-auto；子元素设置了position-relative-且高度大于父元素，在IE6、IE7会被隐藏而不是溢出；" class="headerlink" title="两个块级元素，父元素设置了overflow:auto；子元素设置了position:relative ;且高度大于父元素，在IE6、IE7会被隐藏而不是溢出；"></a>两个块级元素，父元素设置了overflow:auto；子元素设置了position:relative ;且高度大于父元素，在IE6、IE7会被隐藏而不是溢出；</h1><p>&emsp;&emsp;解决方案：父级元素设置 <code>position:relative</code></p>
+<h1 id="IE6下图片下有空隙产生"><a href="#IE6下图片下有空隙产生" class="headerlink" title="IE6下图片下有空隙产生"></a>IE6下图片下有空隙产生</h1><p>&emsp;&emsp;解决方案：可以是改变 <code>html</code> 的排版,或者设置 <code>img为display:block</code> 或者设置 <code>vertical-align</code> 属性为 <code>vertical-align:top/bottom/middle/text-bottom</code> 都可以解决.</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
@@ -207,7 +195,7 @@ methods:{// 在这里定义所有函数
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>目录</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#认识-Vue"><span class="toc-number">1.</span> <span class="toc-text">认识 Vue</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一步：引入框架"><span class="toc-number">1.1.</span> <span class="toc-text">第一步：引入框架</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二步：使用框架"><span class="toc-number">1.2.</span> <span class="toc-text">第二步：使用框架</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#服务器渲染-vs-客户端渲染"><span class="toc-number">2.</span> <span class="toc-text">服务器渲染 vs 客户端渲染</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#前后端分离"><span class="toc-number">3.</span> <span class="toc-text">前后端分离</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#开发模式"><span class="toc-number">4.</span> <span class="toc-text">开发模式</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#不同浏览器的标签默认的外边距-margin-和内边距-padding-不同"><span class="toc-number">1.</span> <span class="toc-text">不同浏览器的标签默认的外边距 margin 和内边距 padding 不同</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#IE6双边距问题；在-IE6中设置了-float-同时又设置-margin-就会出现边距问题"><span class="toc-number">2.</span> <span class="toc-text">IE6双边距问题；在 IE6中设置了 float , 同时又设置 margin , 就会出现边距问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#当标签的高度设置小于10px，在IE6、IE7中会超出自己设置的高度"><span class="toc-number">3.</span> <span class="toc-text">当标签的高度设置小于10px，在IE6、IE7中会超出自己设置的高度</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#图片默认有间距"><span class="toc-number">4.</span> <span class="toc-text">图片默认有间距</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#IE9一下浏览器不能使用opacity"><span class="toc-number">5.</span> <span class="toc-text">IE9一下浏览器不能使用opacity</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#边距重叠问题；当相邻两个元素都设置了margin-边距时，margin-将取最大值，舍弃最小值；"><span class="toc-number">6.</span> <span class="toc-text">边距重叠问题；当相邻两个元素都设置了margin 边距时，margin 将取最大值，舍弃最小值；</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cursor-hand-显示手型在safari-上不支持"><span class="toc-number">7.</span> <span class="toc-text">cursor:hand 显示手型在safari 上不支持</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#两个块级元素，父元素设置了overflow-auto；子元素设置了position-relative-且高度大于父元素，在IE6、IE7会被隐藏而不是溢出；"><span class="toc-number">8.</span> <span class="toc-text">两个块级元素，父元素设置了overflow:auto；子元素设置了position:relative ;且高度大于父元素，在IE6、IE7会被隐藏而不是溢出；</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#IE6下图片下有空隙产生"><span class="toc-number">9.</span> <span class="toc-text">IE6下图片下有空隙产生</span></a></li></ol>
                 </div>
             </div>
             
